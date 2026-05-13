@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="no">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>KC Core | Cateringkjøkken</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" defer></script>
+    <script src="kreativ-data.js" defer></script>
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <div class="shell">
+      <aside class="sidebar" aria-label="Hovedmeny">
+        <div class="brand">
+          <div class="brand-mark">KC</div>
+          <div>
+            <strong>KC Core</strong>
+            <span>Cateringkjøkken</span>
+          </div>
+        </div>
+
+        <nav class="nav" id="main-nav">
+          <button class="nav-item" type="button" data-view="webshop">
+            <i data-lucide="shopping-cart"></i>
+            <span>Webshop</span>
+          </button>
+          <button class="nav-item is-active" type="button" data-view="board">
+            <i data-lucide="truck"></i>
+            <span>Kjøretavle</span>
+          </button>
+          <button class="nav-item" type="button" data-view="orders">
+            <i data-lucide="clipboard-list"></i>
+            <span>Ordre</span>
+          </button>
+          <button class="nav-item" type="button" data-view="articles">
+            <i data-lucide="utensils"></i>
+            <span>Artikler</span>
+          </button>
+          <button class="nav-item" type="button" data-view="recipes">
+            <i data-lucide="book-open"></i>
+            <span>Oppskrifter</span>
+          </button>
+          <button class="nav-item" type="button" data-view="rawMaterials">
+            <i data-lucide="wheat"></i>
+            <span>Råvarer</span>
+          </button>
+          <button class="nav-item" type="button" data-view="inventory">
+            <i data-lucide="package-check"></i>
+            <span>Lager</span>
+          </button>
+          <button class="nav-item" type="button" data-view="production">
+            <i data-lucide="chef-hat"></i>
+            <span>Produksjon</span>
+          </button>
+          <button class="nav-item" type="button" data-view="prices">
+            <i data-lucide="tags"></i>
+            <span>Prislister</span>
+          </button>
+          <button class="nav-item" type="button" data-view="data">
+            <i data-lucide="database"></i>
+            <span>Grunndata</span>
+          </button>
+        </nav>
+
+        <div class="sidebar-foot">
+          <button class="ghost-button" type="button" data-action="export-json">
+            <i data-lucide="download"></i>
+            <span>Eksporter data</span>
+          </button>
+          <button class="ghost-button danger" type="button" data-action="reset-demo">
+            <i data-lucide="rotate-ccw"></i>
+            <span>Tilbakestill demo</span>
+          </button>
+        </div>
+      </aside>
+
+      <main class="workspace">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow">Operativ kjøkken- og logistikkflate</p>
+            <h1 id="view-title">Kjøretavle</h1>
+          </div>
+          <div class="topbar-actions">
+            <label class="date-control">
+              <span>Dato</span>
+              <input type="date" id="selected-date" />
+            </label>
+          </div>
+        </header>
+
+        <section id="app" class="view" aria-live="polite"></section>
+      </main>
+    </div>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  </body>
+</html>
