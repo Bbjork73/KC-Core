@@ -1,0 +1,34 @@
+{
+  "registryItems": 1476,
+  "excelSheet": "Råvarer",
+  "excelCandidates": 98,
+  "accepted": 81,
+  "rejected": 17,
+  "rejectedExamples": [
+    "albondigas",
+    "baguette",
+    "blinis",
+    "bløtdyr",
+    "brisket",
+    "dijon",
+    "hummus",
+    "løyrom",
+    "marengs",
+    "romesco",
+    "skalldyr",
+    "spekemat",
+    "sulfitt",
+    "sumac",
+    "tahini",
+    "tortilla",
+    "wrap"
+  ],
+  "explicitChecks": {
+    "ostekake": false,
+    "medisterkake": false,
+    "henting av kaffekanner": false,
+    "fingermat uio": false,
+    "rundstykke": false,
+    "sjokoladekake": false
+  }
+}

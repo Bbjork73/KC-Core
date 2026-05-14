@@ -289,6 +289,11 @@ h3 {
   overflow: hidden;
 }
 
+.notice-section {
+  background: #fff8df;
+  border-color: #e2c15c;
+}
+
 .section-header,
 .tool-header {
   padding: 14px 16px;
@@ -311,6 +316,10 @@ h3 {
   align-items: center;
   flex-wrap: wrap;
   gap: 8px;
+}
+
+.compact-field {
+  min-width: 220px;
 }
 
 .primary-button {
@@ -348,6 +357,22 @@ h3 {
 
 .icon-button:hover {
   background: #eef4ec;
+}
+
+.row-actions {
+  align-items: center;
+  display: flex;
+  gap: 6px;
+  justify-content: flex-end;
+}
+
+.danger-button {
+  color: #a83232;
+}
+
+.danger-button:hover {
+  background: #fdecec;
+  border-color: #e3a7a7;
 }
 
 .link-button {
@@ -652,6 +677,27 @@ tbody tr.order-status-fakturert .link-button:hover {
   color: var(--green-strong);
 }
 
+.article-card-tabs {
+  margin: -16px -16px 0;
+}
+
+.article-card-tabs .tab-button {
+  min-width: 140px;
+}
+
+.article-detail-page .metrics,
+.ingredient-detail-page .metrics {
+  padding: 16px;
+}
+
+.article-detail-page .article-card-tabs {
+  margin: 0;
+}
+
+.article-detail-body {
+  padding: 16px;
+}
+
 .line-header {
   display: flex;
   align-items: center;
@@ -674,6 +720,22 @@ tbody tr.order-status-fakturert .link-button:hover {
   grid-template-columns: minmax(180px, 1fr) 120px 38px;
   gap: 10px;
   align-items: end;
+  padding: 10px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  background: var(--panel-soft);
+}
+
+.packing-item-list {
+  display: grid;
+  gap: 8px;
+}
+
+.packing-item {
+  display: grid;
+  grid-template-columns: 130px minmax(0, 1fr);
+  gap: 12px;
+  align-items: start;
   padding: 10px;
   border: 1px solid var(--line);
   border-radius: var(--radius-sm);
@@ -831,6 +893,19 @@ tbody tr.order-status-fakturert .link-button:hover {
   margin: 0;
   color: var(--muted);
   font-size: 13px;
+}
+
+.product-card .product-description {
+  margin-top: 8px;
+  line-height: 1.35;
+}
+
+.allergen-line {
+  display: block;
+  margin-top: 8px;
+  color: var(--amber);
+  font-size: 12px;
+  font-weight: 700;
 }
 
 .product-buy,
@@ -1053,15 +1128,30 @@ tbody tr.order-status-fakturert .link-button:hover {
   grid-template-columns: repeat(2, minmax(120px, 1fr)) auto;
 }
 
+.inline-create.waste-create {
+  grid-template-columns: minmax(240px, 2fr) minmax(120px, 0.7fr) minmax(220px, 1.4fr) auto;
+}
+
 .form-actions {
   display: flex;
   justify-content: flex-end;
   gap: 8px;
 }
 
+.article-image-control {
+  display: flex;
+  align-items: end;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.article-image-upload {
+  min-width: min(320px, 100%);
+}
+
 .image-preview {
-  width: 100%;
-  aspect-ratio: 16 / 9;
+  width: 108px;
+  height: 78px;
   border: 1px dashed #b7c2b4;
   border-radius: var(--radius);
   display: grid;
@@ -1070,12 +1160,43 @@ tbody tr.order-status-fakturert .link-button:hover {
   background: #eff5ef;
   color: var(--green-strong);
   font-weight: 800;
+  padding: 0;
+}
+
+.article-thumbnail {
+  flex: 0 0 auto;
+}
+
+button.article-thumbnail:hover {
+  border-color: var(--green);
+  box-shadow: 0 0 0 3px rgba(36, 107, 75, 0.12);
+}
+
+.article-thumbnail.is-empty {
+  cursor: default;
 }
 
 .image-preview img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.article-image-modal {
+  width: min(920px, calc(100vw - 36px));
+}
+
+.article-image-full {
+  padding: 16px;
+  background: #101712;
+}
+
+.article-image-full img {
+  display: block;
+  width: 100%;
+  max-height: 76vh;
+  object-fit: contain;
+  border-radius: var(--radius-sm);
 }
 
 .progress {

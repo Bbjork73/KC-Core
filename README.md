@@ -27,7 +27,10 @@ Dette er en første, lokal prototype for ordresystem og kjøretavle basert på b
 - Artikler som salgsartikkel, produksjonsartikkel eller pakke.
 - Artikler knyttes til avdeling.
 - Egen fane for råvarer og råvaregrupper.
-- Oppskrifter med råvarer, råvaregrupper, leverandør og kostberegning.
+- Egen fane for ingredienser, der en ingrediens kan bestå av råvarer eller andre ingredienser.
+- Oppskrifter på artikler bruker ingredienser, og ingrediensene brytes ned til råvarer for kost og lager.
+- Råvarer har råvaregrupper, leverandør, lager og kostberegning.
+- Råvarelisten valideres mot et lokalt register bygget fra Matvaretabellen, med sperrer for ferdigretter, tjenester, menyer og serveringsartikler.
 - Pakker som består av flere artikler.
 - Lagerbeholdning pr. råvare med minste beholdning og bestillingstid.
 - Menygruppe og NS-kontoplan på artikler.
